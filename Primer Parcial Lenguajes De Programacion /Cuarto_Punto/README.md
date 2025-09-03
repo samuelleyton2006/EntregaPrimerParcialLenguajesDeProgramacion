@@ -17,13 +17,41 @@ Se implementan dos enfoques para el cálculo recursivo del factorial:
    Se calcula el factorial de todos los valores de entrada en estilo funcional, midiendo el tiempo total requerido para el lote de operaciones usando la función `map` y la medición `time.time()`.
 
 **Código fuente Python:**
+``` python
+import time
+import threading
 
+def factorial(n):
+    if n <= 1:
+        return 1
+    return n * factorial(n-1)
 
-- **Observaciones:**  
-  - El cálculo paralelo no es necesariamente más rápido en Python, pero sirve para observar tiempos individuales y la concurrencia de tareas.
-  - El estilo funcional es práctico y compacto, útil para comparar el tiempo de procesamiento contínuo.
-  - Python es sencillo para prototipado, pero su rendimiento desciende con algoritmos recursivos profundos.
+def tiempostomados(n):  
+    inicio = time.time()
+    resultado = factorial(n)
+    fin = time.time()
+    print(f"El factorial de {n} = {resultado} tomando un tiempo de resolucion de: {fin-inicio:.6f} segundos")
 
+def main():
+    valores = [10, 12, 15, 18]
+    hilos = []
+    print("Cálculo factorial en paralelo (con hilos):")
+    for v in valores:
+        hilo = threading.Thread(target=tiempostomados, args=(v,))  
+        hilos.append(hilo)
+        hilo.start()
+    for hilo in hilos:
+        hilo.join()
+    print("\nAhora factorial en estilo funcional usando map():")
+    inicio = time.time()
+    resultados = list(map(factorial, valores))
+    fin = time.time()
+    for v, r in zip(valores, resultados):
+        print(f"El factorial de {v} = {r}")
+    print(f"La función resolvió todos en: {fin-inicio:.6f} segundos")
+
+main()
+```
 ---
 
 ### Desarrollo en C (compilado)
