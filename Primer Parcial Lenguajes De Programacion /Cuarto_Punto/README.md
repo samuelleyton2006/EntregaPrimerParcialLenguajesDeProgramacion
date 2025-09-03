@@ -1,10 +1,40 @@
-Enunciado
-Realizar una comparación del rendimiento entre un lenguaje compilado y un lenguaje interpretado utilizando la función recursiva factorial, con medición de tiempos y aplicación de diferentes estilos de programación.
-Fundamentación teórica
-	•	Lenguaje compilado: El código fuente se traduce directamente a lenguaje máquina antes de la ejecución, lo que garantiza mayor eficiencia y velocidad en la ejecución de tareas computacionalmente intensivas.
-	•	Lenguaje interpretado: El código fuente se traduce y ejecuta línea a línea en tiempo real; esto ofrece mayor flexibilidad, pero a costa de un rendimiento menor, especialmente en tareas recursivas pesadas.
-Descripción de la prueba
-	•	Función empleada: Factorial recursivo clásico.
-	•	Pruebas realizadas: Se calcula el factorial de varios números (10, 12, 15, 18), midiendo el tiempo de ejecución de cada llamada.
-	•	En Python: Se prueba tanto el cálculo en paralelo por hilos (threading) como el estilo funcional (map).
-	•	En C: Se mide el tiempo de cada cálculo secuencialmente y también el tiempo total de un lote de cálculos (“batch”).
+## Comparación de rendimiento: recursión, paralelismo y estilos en Python vs C
+
+### Enunciado
+
+Se pide comparar el rendimiento de un lenguaje compilado (C) y un lenguaje interpretado (Python) utilizando la función recursiva factorial, demostrando estilos variados de programación y midiendo los tiempos de resolución.
+
+---
+
+### Desarrollo en Python (interpretado)
+
+Se implementan dos enfoques para el cálculo recursivo del factorial:
+
+1. **Paralelismo con hilos:**  
+   Se utiliza el módulo estándar `threading` para lanzar un hilo por cada número a calcular, midiendo el tiempo individual necesario para cada cómputo factorial con la función `tiempostomados`. Esto ilustra cómo el paralelismo puede modelarse con Python, aunque por la estructura interna del intérprete CPython (y el Global Interpreter Lock, GIL) la ganancia es limitada para cálculos puramente computacionales.
+
+2. **Programación funcional (`map`):**  
+   Se calcula el factorial de todos los valores de entrada en estilo funcional, midiendo el tiempo total requerido para el lote de operaciones usando la función `map` y la medición `time.time()`.
+
+**Código fuente Python:**
+
+
+- **Observaciones:**  
+  - El cálculo paralelo no es necesariamente más rápido en Python, pero sirve para observar tiempos individuales y la concurrencia de tareas.
+  - El estilo funcional es práctico y compacto, útil para comparar el tiempo de procesamiento contínuo.
+  - Python es sencillo para prototipado, pero su rendimiento desciende con algoritmos recursivos profundos.
+
+---
+
+### Desarrollo en C (compilado)
+
+En C se implementa la función factorial recursiva y se mide el tiempo de cómputo de dos formas:
+
+1. **Cálculo secuencial:**  
+   Se mide y muestra el tiempo que toma cada llamada recursiva individualmente usando funciones de medición a nivel de sistema (`gettimeofday`).
+
+2. **Modo batch (lote):**  
+   Se calcula el tiempo total en el que se procesan todos los valores de entrada en un ciclo.
+
+**Código fuente C:**
+
