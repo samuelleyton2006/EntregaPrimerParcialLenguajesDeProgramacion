@@ -87,16 +87,16 @@ int main() {
         double inicio = tiempo_actual();
         int resultado = factorial(valores[i]);
         double fin = tiempo_actual();
-        printf("[REC] factorial(%d) = %d en %.6lfs\n", valores[i], resultado, fin-inicio);
+        printf("El factorial de (%d) = %d en %.6lfs\n", valores[i], resultado, fin-inicio);
     }
     printf("\nBatch (todos seguidos):\n");
     double inicio = tiempo_actual();
     for(int i=0; i<N; i++) {
         int resultado = factorial(valores[i]);
-        printf("[BATCH] factorial(%d) = %d\n", valores[i], resultado);
+        printf("[El factorial(%d) = %d\n", valores[i], resultado);
     }
     double fin = tiempo_actual();
-    printf("Todos (batch) calculados en %.6lf segundos\n", fin-inicio);
+    printf("Todos los factoriales calculados en %.6lf segundos\n", fin-inicio);
     return 0;
 }
 ```
