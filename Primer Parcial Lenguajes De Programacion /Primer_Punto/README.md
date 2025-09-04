@@ -2,7 +2,7 @@
 
 ### Problema
 
-Dado el alfabeto \(\Sigma = \{a, b, c\}\), construir un AFD que reconozca el conjunto de cadenas donde todas las 'a' preceden a todas las 'b', y todas las 'b' preceden a todas las 'c'. Es posible que no haya 'a', 'b' o 'c'.
+Dado el alfabeto \(Al = \{a, b, c\}\), construir un AFD que reconozca el conjunto de cadenas donde todas las 'a' preceden a todas las 'b', y todas las 'b' preceden a todas las 'c'. Es posible que no haya 'a', 'b' o 'c'.
 
 ---
 
@@ -18,29 +18,26 @@ Esto significa: cualquier cantidad de 'a' (incluso cero), seguida de cualquier c
 ### Definición Formal del AFD
 
 - **Alfabeto:**  
-  \(\Sigma = \{a, b, c\}\)
+  \(Al= \{a, b, c\}\)
 
 - **Estados:**  
-  \(Q = \{q_0, q_1, q_2\}\)
+  \(Q = \{Q0, Q1, Q2\}\)
 
 - **Estado inicial:**  
-  \(q_0\)
+  \(Q0\)
 
 - **Estados de aceptación:**  
-  \(\{q_0, q_1, q_2\}\)
+  \(\{Q0, Q1, Q2\}\)
 
 - **Función de transición \(\delta\):**
 
   | Estado | Entrada 'a' | Entrada 'b' | Entrada 'c' |
   |--------|:-----------:|:-----------:|:-----------:|
-  | q0     | q0          | q1          | q2          |
-  | q1     | —           | q1          | q2          |
-  | q2     | —           | —           | q2          |
-
-(—: transición no definida)
+  | Q0     | Q0          | Q1          | Q2          |
+  | Q1     | —           | Q1          | Q2          |
+  | Q2     | —           | —           | Q2          |
 
 ---
 
-### Diagrama de Transiciones
 
 
