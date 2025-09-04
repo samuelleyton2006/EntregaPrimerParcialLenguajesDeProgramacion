@@ -8,5 +8,5 @@ def AutomataID(input_str):
         if not ((c >= 'a' and c <= 'z') or (c >= 'A' and c <= 'Z') or (c >= '0' and c <= '9')):
             return "no pasa"
     return "si pasa"
-pruebas = ['a123', 'Zalgo', 'juan99', '9inicio', 'a-b']
+pruebas = ['Martha21', 'g2python', 'CoreX', '123inicio', 'alg-uno']
 print([(s, AutomataID(s)) for s in pruebas])
