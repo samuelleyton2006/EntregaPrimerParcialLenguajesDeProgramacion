@@ -39,5 +39,6 @@ Esto significa: cualquier cantidad de 'a' (incluso cero), seguida de cualquier c
 
 ---
 
+![Image alt]https://github.com/samuelleyton2006/EntregaPrimerParcialLenguajesDeProgramacion/blob/46ba50e86d404475a1263e1593773bfc97fbc27c/Primer%20Parcial%20Lenguajes%20De%20Programacion%20/Primer_Punto/Terminal.jpg 
 
 
