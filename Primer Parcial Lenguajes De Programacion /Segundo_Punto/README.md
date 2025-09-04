@@ -1,1 +1,1 @@
-
+![Imagealt](https://github.com/samuelleyton2006/EntregaPrimerParcialLenguajesDeProgramacion/blob/58c5c2da140ef778339e016a8f716044b1317d2f/Primer%20Parcial%20Lenguajes%20De%20Programacion%20/Segundo_Punto/Termin.jpg)
