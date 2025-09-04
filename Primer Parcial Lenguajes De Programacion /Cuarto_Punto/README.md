@@ -8,6 +8,8 @@ Se pide comparar el rendimiento de un lenguaje compilado (C) y un lenguaje inter
 
 ### Desarrollo en Python (interpretado)
 
+![Imagealt](https://github.com/samuelleyton2006/EntregaPrimerParcialLenguajesDeProgramacion/blob/07dcfd806c6b04fc8bbcbfcf184ef23fa7633290/Primer%20Parcial%20Lenguajes%20De%20Programacion%20/Cuarto_Punto/TerminPy.jpg)
+
 Se implementan dos enfoques para el cálculo recursivo del factorial:
 
 1. **Paralelismo con hilos:**  
@@ -55,6 +57,8 @@ main()
 ---
 
 ### Desarrollo en C (compilado)
+
+![Imagealt](https://github.com/samuelleyton2006/EntregaPrimerParcialLenguajesDeProgramacion/blob/07dcfd806c6b04fc8bbcbfcf184ef23fa7633290/Primer%20Parcial%20Lenguajes%20De%20Programacion%20/Cuarto_Punto/TerminC.jpg)
 
 En C se implementa la función factorial recursiva y se mide el tiempo de cómputo de dos formas:
 
